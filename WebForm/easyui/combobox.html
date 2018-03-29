@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="../script/jquery-easyui-1.5.4.3/themes/default/easyui.css" rel="stylesheet" />
+
+    <script src="../script/jquery-2.1.1.js"></script>
+    <script src="../script/jquery-easyui-1.5.4.3/jquery.easyui.min.js"></script>
+</head>
+<body>
+    <input id="ts" class="easyui-combobox" data-options="
+		valueField: 'label',
+		textField: 'value',
+		data: [{
+			label: 'java',
+			value: 'Java'
+		},{
+			label: 'perl',
+			value: 'Perl'
+		},{
+			label: 'ruby',
+			value: 'Ruby'
+		}]" />
+
+    <script>
+        $(function () {
+            $("#ts").combobox({
+                url: "/GetData.ashx",
+                valueField: 'id',
+                textField: 'name',
+                queryParams: { action: "GetComboboxData" },
+                width: 1000
+            })
+        })
+    </script>
+</body>
+</html>

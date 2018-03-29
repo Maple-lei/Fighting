@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../script/bootstrap-3.3.5/css/bootstrap.css" rel="stylesheet" />
+    <script src="../script/jquery-2.1.1.js"></script>
+    <script src="../jQuery-Plugin/bootstrap-combobox/bootstrap.combobox.js"></script>
+</head>
+<body>
+    <p>原生</p>
+    <select class="form-control" style="width:200px;">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+    <br />
+
+    <p>直接给数据绑定</p>
+    <select id="bs_combobox"></select>
+
+    <br />
+    <p>通过后台获取数据</p>
+    <select id="byurl"></select>
+
+    <br />
+    <p>通过标签属性来生成</p>
+    <select id="bydataoption" data-option="width:150"></select>
+
+    <br /><br />
+
+    <button id="bt" style="width:150px;height:50px;">获取选中的值</button>
+
+    <script>
+        var data = [
+           {
+               "id": "1",
+               "text": "胡磊"
+           },
+           {
+               "id": "2",
+               "text": "shijuan"
+           }
+        ];
+
+
+        $(function () {
+
+            $("#bs_combobox").combobox({
+                valueField: 'id',
+                textField: 'text',
+                width: 1000,
+                data: data
+            })
+
+            $("#byurl").combobox({
+                url: "/GetData.ashx",
+                valueField: 'id',
+                textField: 'name',
+                queryParams: { action: "GetComboboxData" },
+                width: 100
+            })
+
+            $("#bt").click(function () {
+                var value = $("#byurl").combobox("getValue");
+                var text = $("#byurl").combobox("getText");
+
+                alert(value);
+                alert(text);
+            })
+        })
+
+    </script>
+</body>
+</html>

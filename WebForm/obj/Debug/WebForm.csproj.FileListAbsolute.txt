@@ -70,3 +70,11 @@ F:\Fighting\WebForm\bin\Newtonsoft.Json.dll
 F:\Fighting\WebForm\bin\Newtonsoft.Json.xml
 F:\Fighting\WebForm\obj\Debug\WebForm.dll
 F:\Fighting\WebForm\obj\Debug\WebForm.pdb
+G:\Fighting\WebForm\bin\WebForm.dll.config
+G:\Fighting\WebForm\bin\WebForm.dll
+G:\Fighting\WebForm\bin\WebForm.pdb
+G:\Fighting\WebForm\bin\Newtonsoft.Json.dll
+G:\Fighting\WebForm\bin\Newtonsoft.Json.xml
+G:\Fighting\WebForm\obj\Debug\WebForm.dll
+G:\Fighting\WebForm\obj\Debug\WebForm.pdb
+G:\Fighting\WebForm\obj\Debug\WebForm.csprojResolveAssemblyReference.cache
