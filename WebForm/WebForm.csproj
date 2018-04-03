@@ -55,6 +55,7 @@
     <Content Include="bootstrap\combobox.html" />
     <Content Include="easyui\combobox.html" />
     <Content Include="Global.asax" />
+    <Content Include="h5\新增标签一览.html" />
     <Content Include="jQuery-Plugin\bootstrap-combobox\bootstrap.combobox.js" />
     <Content Include="script\bootstrap-3.3.5\css\bootstrap-theme.css" />
     <Content Include="script\bootstrap-3.3.5\css\bootstrap-theme.min.css" />

@@ -12,8 +12,6 @@
 
                 if(strOptions){
                     var objOption = $.parseJSON(strOptions);
-
-
                 }            
             })
         })        
@@ -43,7 +41,7 @@
             if (previousOption) {
                 mergeOptions = $.extend({}, previousOption, options);  //把传入的参数和默认参数进行合并
             } else {
-                mergeOptions = $.extend({}, $.fn.combobox.defaults, options, previousOption);
+                mergeOptions = $.extend({}, $.fn.combobox.defaults, options);
 
             }
             $.data(this, "combobox", mergeOptions);
@@ -58,7 +56,6 @@
                 //通过ajax去后台获取
                 request(this, mergeOptions);
             }
-
         })
     }
 
@@ -98,8 +95,6 @@
             })
         }
     }
-
-
 
     $.fn.combobox.methods = {
         getValue: function (target, param) {
@@ -166,6 +161,12 @@
         }
 
         $(target).html(arrOptionHtml.join(""));
+
+        $(target).find("option").each(function () {
+            $(this).bind("click", function () {
+
+            })
+        })
     }
 
     //从服务器加载数据

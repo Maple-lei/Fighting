@@ -60,15 +60,17 @@
                 valueField: 'id',
                 textField: 'name',
                 queryParams: { action: "GetComboboxData" },
-                width: 100
+                width: 100,
+                onSelect: function (rec) {
+
+                }
             })
 
             $("#bt").click(function () {
                 var value = $("#byurl").combobox("getValue");
                 var text = $("#byurl").combobox("getText");
 
-                alert(value);
-                alert(text);
+                alert("value:" + value + ",text:" + text);
             })
         })
 
