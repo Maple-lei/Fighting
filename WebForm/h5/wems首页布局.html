@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <link href="../script/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        /*div {
+            border: 1px solid red;
+            background-color: #fff;
+        }*/
+
+        .row-interval {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .gray {
+            background-color: #F1F4F5;
+        }
+
+        .widget {
+            border-radius: 3px;
+            background-color: #fff;
+            height: calc(100% - 30px);
+            height: -webkit-calc(100% - 30px);
+            padding: 5px 20px;
+        }
+            .widget  {
+                text-align: center;
+            }
+
+    </style>
+</head>
+<body class="gray">
+    <div class="container-fluid">
+        <div class="row row-interval">
+            <div class="col-md-6" style="height:220px;">
+                <div class="widget">
+                    <h3>用能看板</h3>
+                    <ul class="list-unstyled">
+                        <li style="margin-bottom:10px;">
+                            <div class="row" style="font-weight:bold">
+                                <div class="col-sm-4">全厂能源</div>
+                                <div class="col-sm-4">本月</div>
+                                <div class="col-sm-4">本年</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="row">
+                                <div class="col-sm-4">用电</div>
+                                <div class="col-sm-4"  style="color:red">123456 kWh</div>
+                                <div class="col-sm-4" style="color:red">56789 kWh</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">用氧</div>
+                                <div class="col-sm-4" style="color:red">123456 kWh</div>
+                                <div class="col-sm-4" style="color:red">56789 kWh</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">用氮</div>
+                                <div class="col-sm-4" style="color:red">123456 kWh</div>
+                                <div class="col-sm-4" style="color:red">56789 kWh</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4">合计折标煤</div>
+                                <div class="col-sm-4" style="color:red">123456 kWh</div>
+                                <div class="col-sm-4" style="color:red">56789 kWh</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6" style="height:220px;">
+                <div class="widget">
+                    <h3>生产情况看板</h3>
+                </div>
+            </div>
+            <div class="col-md-6" style="height:200px;">
+                <div class="widget" >
+                    <h3>指标运行情况看板</h3>
+                </div>
+            </div>
+            <div class="col-md-6" style="height:200px;">
+                <div class="widget">
+                    <h3>能耗走势分析</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

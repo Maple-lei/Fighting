@@ -30,7 +30,11 @@
                 valueField: 'id',
                 textField: 'name',
                 queryParams: { action: "GetComboboxData" },
-                width: 1000
+                width: 1000,
+                onSelect: function (rec) {
+                    var msg = "id:" + rec.id + ";name:" + rec.name;
+                    alert(msg);
+                }
             })
         })
     </script>

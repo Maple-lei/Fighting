@@ -52,26 +52,32 @@
                 valueField: 'id',
                 textField: 'text',
                 width: 1000,
-                data: data
-            })
-
-            $("#byurl").combobox({
-                url: "/GetData.ashx",
-                valueField: 'id',
-                textField: 'name',
-                queryParams: { action: "GetComboboxData" },
-                width: 100,
-                onSelect: function (rec) {
-
+                data: data,
+                onSelect:function(row){
+                    alert (row.id);
+                },
+                onLoadSuccess: function (data) {
+                    //alert(data.length);
                 }
             })
 
-            $("#bt").click(function () {
-                var value = $("#byurl").combobox("getValue");
-                var text = $("#byurl").combobox("getText");
+            //$("#byurl").combobox({
+            //    url: "/GetData.ashx",
+            //    valueField: 'id',
+            //    textField: 'name',
+            //    queryParams: { action: "GetComboboxData" },
+            //    width: 100,
+            //    onSelect: function (rec) {
 
-                alert("value:" + value + ",text:" + text);
-            })
+            //    }
+            //})
+
+            //$("#bt").click(function () {
+            //    var value = $("#byurl").combobox("getValue");
+            //    var text = $("#byurl").combobox("getText");
+
+            //    alert("value:" + value + ",text:" + text);
+            //})
         })
 
     </script>

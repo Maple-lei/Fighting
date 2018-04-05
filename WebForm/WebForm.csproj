@@ -55,6 +55,7 @@
     <Content Include="bootstrap\combobox.html" />
     <Content Include="easyui\combobox.html" />
     <Content Include="Global.asax" />
+    <Content Include="h5\wems首页布局.html" />
     <Content Include="h5\新增标签一览.html" />
     <Content Include="jQuery-Plugin\bootstrap-combobox\bootstrap.combobox.js" />
     <Content Include="script\bootstrap-3.3.5\css\bootstrap-theme.css" />
@@ -858,6 +859,7 @@
     <Content Include="script\jquery-easyui-1.5.4.3\themes\metro\window.css" />
     <Content Include="script\jquery-easyui-1.5.4.3\themes\mobile.css" />
     <Content Include="test\jQuery判断dom节点类型.html" />
+    <Content Include="test\js传递对象参数，是引用吗.html" />
     <Content Include="test\通过变量获取对象的属性.html" />
     <Content Include="Web.config" />
     <Content Include="script\bootstrap-3.3.5\css\bootstrap-theme.css.map" />

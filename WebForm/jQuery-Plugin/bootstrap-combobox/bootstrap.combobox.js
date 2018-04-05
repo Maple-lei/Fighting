@@ -4,21 +4,6 @@
  */
 ; (function ($, window, document, undefined) {
 
-    function parse() {
-        $(function(){
-            $(".combobox").each(function () {
-                //绑定在标签上的属性
-                var strOptions = $(this).attr("data-options");
-
-                if(strOptions){
-                    var objOption = $.parseJSON(strOptions);
-                }            
-            })
-        })        
-    }
-
-    parse();
-
     $.fn.combobox = function (options, param) {
 
         //直接调用combobox的方法
@@ -34,27 +19,27 @@
 
         options = options || {}; //如果options没有指定，则，赋给 {}
         return this.each(function () {
-            //之前绑定在对象上的参数
-            var previousOption = $.data(this, "combobox");
+            //state 为options和data组合对象
+            var state = $.data(this, "combobox");
 
-            var mergeOptions;
-            if (previousOption) {
-                mergeOptions = $.extend({}, previousOption, options);  //把传入的参数和默认参数进行合并
+            if (state) {
+                $.extend(state.options, options);
             } else {
-                mergeOptions = $.extend({}, $.fn.combobox.defaults, options);
-
+                state = $.data(this, "combobox", {
+                    options: $.extend({}, $.fn.combobox.defaults, options),
+                    data: []
+                })
             }
-            $.data(this, "combobox", mergeOptions);
 
             //创建基本元素
-            create(this, mergeOptions);
+            create(this, state.options);
 
             //如果是直接传进来的数据，则直接绑定
-            if (mergeOptions.data) {
-                loadData(this, mergeOptions.data);
+            if (state.options.data) {
+                loadData(this, state.options.data);
             } else {
                 //通过ajax去后台获取
-                request(this, mergeOptions);
+                request(this, state.options);
             }
         })
     }
@@ -93,6 +78,13 @@
                     error.apply(this, arguments);
                 }
             })
+        },
+        finder: {
+            getRow: function (target, p) {
+                var state = $.data(target, 'combobox');
+                var index = (p instanceof jQuery) ? p.attr('id').substr(state.itemIdPrefix.length + 1) : getRowIndex(target, p);
+                return state.data[parseInt(index)];
+            }
         }
     }
 
@@ -108,10 +100,10 @@
         },
 
         //返回选项（options）对象。
-        options: function () {
-            var result = $.extend({}, $.fn.combobox.defaults);
+        options: function (target) {
+            var state = $(target, "combobox");
 
-            return result;
+            return state.options;
         },
 
         //当用户选择一个列表项时触发。
@@ -119,7 +111,6 @@
 
         },
 
-        //
         clear: function () {
 
         }
@@ -146,8 +137,10 @@
      * 加载数据，之前的下拉项将会被删除
      */
     function loadData(target, data, param) {
+        var state = $(target).data("combobox");
+        state.data = data;
 
-        var targetOptions = $(target).data("combobox");
+        var targetOptions = state.options;
 
         var valueField = targetOptions.valueField;
         var textField = targetOptions.textField;
@@ -162,11 +155,29 @@
 
         $(target).html(arrOptionHtml.join(""));
 
-        $(target).find("option").each(function () {
-            $(this).bind("click", function () {
-
-            })
+        $(target).on("click", "option", function () {
+            alert("nimei")
         })
+
+        //调用onLoadSuccess方法
+        targetOptions.onLoadSuccess.call(target, data);
+
+        //给每个options绑定click事件，同时执行onSelect方法
+
+      
+
+
+
+        //$(target).find("option").each(function () {
+
+        //    $(this).on("click", function () {
+        //        var value = $(this).attr("value");
+        //        aler(value);
+        //        var index = getRowIndex(target, value);
+        //        var row = state.data[index];
+        //        targetOptions.onSelect.call(target, row);
+        //    })
+        //})
     }
 
     //从服务器加载数据
@@ -177,6 +188,18 @@
         }, function () {
             options.onLoadError.apply(this, arguments);
         });
+    }
+
+    function getRowIndex(target, value) {
+        var state = $.data(target, 'combobox');
+        var opts = state.options;
+        var data = state.data;
+        for (var i = 0; i < data.length; i++) {
+            if (data[i][opts.valueField] == value) {
+                return i;
+            }
+        }
+        return -1;
     }
 
 })(jQuery, window, document)
