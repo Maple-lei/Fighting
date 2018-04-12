@@ -155,29 +155,16 @@
 
         $(target).html(arrOptionHtml.join(""));
 
-        $(target).on("click", "option", function () {
-            alert("nimei")
+        $(target).on("change", function () {
+            var item = $("#test").find("option:selected");
+
+            var index = getRowIndex(target, value);
+            var row = state.data[index];
+            targetOptions.onSelect.call(target, row);
         })
 
         //调用onLoadSuccess方法
         targetOptions.onLoadSuccess.call(target, data);
-
-        //给每个options绑定click事件，同时执行onSelect方法
-
-      
-
-
-
-        //$(target).find("option").each(function () {
-
-        //    $(this).on("click", function () {
-        //        var value = $(this).attr("value");
-        //        aler(value);
-        //        var index = getRowIndex(target, value);
-        //        var row = state.data[index];
-        //        targetOptions.onSelect.call(target, row);
-        //    })
-        //})
     }
 
     //从服务器加载数据

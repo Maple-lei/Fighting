@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="../script/bootstrap-3.3.5/css/bootstrap.css" rel="stylesheet" />
+    <script src="../script/jquery-2.1.1.js"></script>
+
+    <script>
+        $(function () {
+            $("#test").append("<option>6</option>")
+
+            $("#test").on("change", function () {
+                var item = $("#test").find("option:selected");
+                alert(item.val());
+            })
+        })
+    </script>
+</head>
+<body>
+    <select id="test" class="form-control" style="width:200px;">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+</body>
+</html>

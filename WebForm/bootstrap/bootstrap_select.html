@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../script/bootstrap-3.3.5/css/bootstrap.css" rel="stylesheet" />
+    <link href="../script/bootstrap-select-1.12.4/dist/css/bootstrap-select.css" rel="stylesheet" />
+
+    <script src="../script/jquery-2.1.1.js"></script>
+    <script src="../script/bootstrap-3.3.5/js/bootstrap.js"></script>
+    <script src="../script/bootstrap-select-1.12.4/dist/js/bootstrap-select.js"></script>
+    <script src="../jQuery-Plugin/bootstrap-select-extend.js"></script>
+
+</head>
+<body>
+    <select class="selectpicker" multiple data-live-search="true" data-live-search-placeholder="搜索" data-actions-box="true">
+        <optgroup label="filter1">
+            <option>option1</option>
+            <option selected>option2</option>
+            <option>option3</option>
+            <option>option4</option>
+        </optgroup>
+        <optgroup label="filter2">
+            <option>option1</option>
+            <option>option2</option>
+            <option>option3</option>
+            <option>option4</option>
+        </optgroup>
+        <optgroup label="filter3">
+            <option>option1</option>
+            <option>option2</option>
+            <option>option3</option>
+            <option>option4</option>
+        </optgroup>
+    </select>
+
+    <br /><br /><br />
+
+    <select id="test" class="selectpicker" multiple data-max-options="2" style="width:200px;">
+        <option value="11">1</option>
+        <option value="22">2</option>
+        <option value="33">3</option>
+        <option value="44">4</option>
+        <option value="55">5</option>
+    </select>
+
+    <script>
+        $(function () {
+
+            $("#test").selectpicker("val", "11");
+
+            //$("#test").on("hidden.bs.select", function () {
+            //    alert($("#test").val());
+            //})
+
+            //$('#test').bootstrapSelect({
+            //    url: "/GetData.ashx",
+            //    valueField: 'id',
+            //    textField: 'name',
+            //    queryParams: { action: "GetComboboxData" },
+            //});
+        })
+    </script>
+</body>
+</html>
