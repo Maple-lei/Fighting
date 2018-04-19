@@ -54,12 +54,32 @@
   <ItemGroup>
     <Content Include="bootstrap\bootstrap_select.html" />
     <Content Include="bootstrap\combobox.html" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
     <Content Include="easyui\combobox.html" />
     <Content Include="Global.asax" />
     <Content Include="h5\wems首页布局.html" />
     <Content Include="h5\新增标签一览.html" />
     <Content Include="html\bootbox.html" />
+    <Content Include="html\font-awesome.html" />
+    <Content Include="html\javascript 原型以及原型链.html" />
     <Content Include="html\范围刻度.html" />
+    <Content Include="image\1.png" />
+    <Content Include="image\freezer.jpg" />
+    <Content Include="image\girl\1.jpg" />
+    <Content Include="image\girl\10.jpg" />
+    <Content Include="image\girl\2.jpg" />
+    <Content Include="image\girl\3.jpg" />
+    <Content Include="image\girl\4.jpg" />
+    <Content Include="image\girl\5.jpg" />
+    <Content Include="image\girl\6.jpg" />
+    <Content Include="image\girl\7.jpg" />
+    <Content Include="image\girl\8.jpg" />
+    <Content Include="image\girl\9.jpg" />
+    <Content Include="image\girl\bg.jpg" />
+    <Content Include="image\girl\blackbg.png" />
+    <Content Include="image\index\logo.jpg" />
+    <Content Include="image\kaola.jpg" />
     <Content Include="jQuery-Plugin\bootstrap-combobox\bootstrap.combobox.js" />
     <Content Include="jQuery-Plugin\bootstrap-select-extend.js" />
     <Content Include="script\bootbox.min.js" />
@@ -1094,8 +1114,11 @@
     <Content Include="script\jquery-easyui-1.5.4.3\themes\metro\validatebox.css" />
     <Content Include="script\jquery-easyui-1.5.4.3\themes\metro\window.css" />
     <Content Include="script\jquery-easyui-1.5.4.3\themes\mobile.css" />
+    <Content Include="test\a标签.html" />
     <Content Include="test\jQuery判断dom节点类型.html" />
     <Content Include="test\js传递对象参数，是引用吗.html" />
+    <Content Include="html\QQ邮箱checkbox.html" />
+    <Content Include="test\绑定多个click事件.html" />
     <Content Include="test\给动态生成的html绑定click事件.html" />
     <Content Include="test\通过变量获取对象的属性.html" />
     <Content Include="Web.config" />
@@ -1155,6 +1178,12 @@
     <Content Include="script\bootstrap-select-1.12.4\sass\bootstrap-select.scss" />
     <Content Include="script\bootstrap-select-1.12.4\sass\variables.scss" />
     <Content Include="script\ion.rangeSlider-master\ionRangeSliderDemo\.DS_Store" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1172,10 +1201,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="css\" />
-    <Folder Include="image\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

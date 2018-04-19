@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script>
+        function fn() {
+
+        }
+
+        var f1 = new fn();
+
+        //f1是被fn创建的
+        console.log(fn.prototype == f1.__proto__);
+
+        //fn是被Function创建的
+        console.log(Function.prototype == fn.__proto__);
+
+        console.log(Function.prototype.__proto__ == Object.prototype);
+
+        //fn.prototype 是被 Object函数创建的
+        console.log(fn.prototype.__proto__ == Object.prototype)
+
+        //Object.prototype.__proto__指向了终点 null
+        console.log(Object.prototype.__proto__);
+
+        
+
+
+        var obj = new Object();
+        
+        console.log(obj.__proto__ == Object.prototype);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
