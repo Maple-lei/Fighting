@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="../script/bootstrap-3.3.5/css/bootstrap.css" rel="stylesheet" />
+
+    <style>
+        .item {
+            height: 65px;
+            border-bottom:1px solid #c2c2c2;
+        }
+
+        .status {
+            display: block;
+            width: 15px;
+            height: 15px;
+            border: 2px solid #fff;
+            border-radius: 100%;
+        }
+
+        .status-finish {
+            background-color: #46be8a;
+        }
+
+        .status-warn {
+            background-color: #f96868;
+        }
+
+        .icon-size {
+            height: 50px;
+            width: 50px;
+        }
+
+        .warn-level{
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row item">
+            <div class="col-sm-6 content">
+                <div style="display:table-cell;vertical-align:middle;">
+                    <span class="status status-finish"></span>
+                </div>
+                <div style="display: table-cell;padding-left:10px;">
+                    <div class="warn-time">
+                        2018-6-19 上午8:14:30
+                    </div>
+                    <div class="warn-level">
+                        高报警
+                    </div>
+                    <div>
+                        高压1#进线多功能表
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 state" style="line-height:65px;">
+                已处理
+            </div>
+            <div class="col-sm-3 icon">
+                <img class="icon-size" src="/image/app/ok.png" />
+            </div>
+        </div>
+        <div class="row item">
+            <div class="col-sm-6 content">
+                <div style="display:table-cell;vertical-align:middle;">
+                    <span class="status status-finish"></span>
+                </div>
+                <div style="display: table-cell;padding-left:10px;">
+                    <div class="warn-time">
+                        2018-6-19 上午8:14:30
+                    </div>
+                    <div class="warn-level">
+                        高报警
+                    </div>
+                    <div>
+                        低压2段电源进线多功能表
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 state" style="line-height:65px;">
+                已处理
+            </div>
+            <div class="col-sm-3 icon">
+                <img class="icon-size" src="/image/app/ok.png" />
+            </div>
+        </div>
+        <div class="row item">
+            <div class="col-sm-6 content">
+                <div style="display:table-cell;vertical-align:middle;">
+                    <span class="status status-warn"></span>
+                </div>
+                <div style="display: table-cell;padding-left:10px;">
+                    <div class="warn-time">
+                        2018-6-19 上午8:14:30
+                    </div>
+                    <div class="warn-level">
+                        低报警
+                    </div>
+                    <div>
+                        高压2#进线多功能表
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 state" style="line-height:65px;">
+                未处理
+            </div>
+            <div class="col-sm-3 icon">
+                <img class="icon-size" src="/image/app/warning.png" />
+            </div>
+        </div>
+    </div>
+</body>
+</html>

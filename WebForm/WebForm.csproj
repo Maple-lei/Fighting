@@ -41,6 +41,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
@@ -52,19 +53,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\login.html" />
+    <Content Include="app\warn.html" />
+    <Content Include="App设计布局\KPI.html" />
     <Content Include="bootstrap\bootstrap_select.html" />
     <Content Include="bootstrap\combobox.html" />
+    <Content Include="bootstrap\dialog.html" />
+    <Content Include="CSharpTest.aspx" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="easyui\combobox.html" />
+    <Content Include="echarts\pie.html" />
+    <Content Include="echarts\bar.html" />
     <Content Include="Global.asax" />
+    <Content Include="h5\nav.html" />
     <Content Include="h5\wems首页布局.html" />
     <Content Include="h5\新增标签一览.html" />
+    <Content Include="html\1.html" />
     <Content Include="html\bootbox.html" />
     <Content Include="html\font-awesome.html" />
     <Content Include="html\javascript 原型以及原型链.html" />
     <Content Include="html\范围刻度.html" />
+    <Content Include="html\首页分析诊断布局.html" />
     <Content Include="image\1.png" />
+    <Content Include="image\15.png" />
+    <Content Include="image\app\ok.png" />
+    <Content Include="image\app\warning.png" />
     <Content Include="image\freezer.jpg" />
     <Content Include="image\girl\1.jpg" />
     <Content Include="image\girl\10.jpg" />
@@ -297,6 +311,8 @@
     <Content Include="script\bootstrap-select-1.12.4\js\i18n\defaults-zh_CN.js" />
     <Content Include="script\bootstrap-select-1.12.4\js\i18n\defaults-zh_TW.js" />
     <Content Include="script\bootstrap-select-1.12.4\test.html" />
+    <Content Include="script\echarts\echarts.common.min.js" />
+    <Content Include="script\echarts\echarts.simple.min.js" />
     <Content Include="script\ion.rangeSlider-master\css\ion.rangeSlider.css" />
     <Content Include="script\ion.rangeSlider-master\css\ion.rangeSlider.skinFlat.css" />
     <Content Include="script\ion.rangeSlider-master\css\ion.rangeSlider.skinHTML5.css" />
@@ -1116,11 +1132,15 @@
     <Content Include="script\jquery-easyui-1.5.4.3\themes\mobile.css" />
     <Content Include="test\a标签.html" />
     <Content Include="test\jQuery判断dom节点类型.html" />
+    <Content Include="test\js-indexof.html" />
     <Content Include="test\js传递对象参数，是引用吗.html" />
     <Content Include="html\QQ邮箱checkbox.html" />
+    <Content Include="test\URLDecode.html" />
+    <Content Include="test\圆角边框.html" />
     <Content Include="test\绑定多个click事件.html" />
     <Content Include="test\给动态生成的html绑定click事件.html" />
     <Content Include="test\通过变量获取对象的属性.html" />
+    <Content Include="Tool\DateTime-Long-Convert.aspx" />
     <Content Include="Web.config" />
     <Content Include="script\bootstrap-3.3.5\css\bootstrap-theme.css.map" />
     <Content Include="script\bootstrap-3.3.5\css\bootstrap.css.map" />
@@ -1192,7 +1212,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="common\DatetimeConvert.cs" />
     <Compile Include="common\JsonHelper.cs" />
+    <Compile Include="CSharpTest.aspx.cs">
+      <DependentUpon>CSharpTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSharpTest.aspx.designer.cs">
+      <DependentUpon>CSharpTest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GetData.ashx.cs">
       <DependentUpon>GetData.ashx</DependentUpon>
     </Compile>
@@ -1200,6 +1228,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tool\DateTime-Long-Convert.aspx.cs">
+      <DependentUpon>DateTime-Long-Convert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tool\DateTime-Long-Convert.aspx.designer.cs">
+      <DependentUpon>DateTime-Long-Convert.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
