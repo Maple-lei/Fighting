@@ -319,6 +319,7 @@
     <Content Include="script\bootstrap-select-1.12.4\test.html" />
     <Content Include="script\chartist-js-develop\.gitattributes" />
     <Content Include="script\chartist-js-develop\.gitignore" />
+    <Content Include="script\chartist-js-develop\all.js" />
     <Content Include="script\chartist-js-develop\dist\chartist.css" />
     <Content Include="script\chartist-js-develop\dist\chartist.js" />
     <Content Include="script\chartist-js-develop\dist\chartist.min.css" />
